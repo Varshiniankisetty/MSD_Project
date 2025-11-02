@@ -28,7 +28,7 @@ const Feedback = () => {
       }
 
       const res = await axios.post(
-        "http://localhost:5000/api/feedback",
+        "https://msd-project-backend.onrender.com",
         {
           message: form.message,
           rating: form.rating,
