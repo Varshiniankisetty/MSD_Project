@@ -1,0 +1,147 @@
+body {
+  background: var(--apartment-cream);
+  margin: 0;
+  font-family: var(--font-primary);
+}
+
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 60px 20px;
+  margin-top: 80px;
+}
+
+.login-container {
+  background: #ffffff;
+  width: 450px;
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.login-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.login-message {
+  color: #666;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 0.9rem;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #1e88e5;
+  outline: none;
+}
+
+.input-group input.error,
+.input-group select.error {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #1e88e5;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-login:hover:not(:disabled) {
+  background: #1565c0;
+}
+
+.btn-login:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+.signup-prompt {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.signup-link {
+  color: #1e88e5;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* Error Messages */
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  border: 1px solid #f5c6cb;
+  text-align: left;
+}
+
+.field-error {
+  color: #dc3545;
+  font-size: 0.8rem;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .login-container {
+    width: 100%;
+    max-width: 320px;
+    margin: 20px;
+    padding: 25px 20px;
+  }
+
+  .login-container h2 {
+    font-size: 1.3rem;
+  }
+}

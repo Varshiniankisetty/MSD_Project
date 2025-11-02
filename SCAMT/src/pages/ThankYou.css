@@ -1,0 +1,87 @@
+/* Thank You Page Styles */
+.thankyou-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(248, 245, 240, 0.8) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.thankyou-container {
+  background: #ffffff;
+  width: 800px;
+  max-width: 90vw;
+  padding: 3rem 2rem;
+  border-radius: 16px;
+  border: 1px solid rgba(212, 197, 179, 0.3);
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.thankyou-container h2 {
+  color: var(--success-color, #28a745);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(40, 167, 69, 0.2);
+}
+
+.thankyou-container p {
+  color: var(--apartment-slate, #2c3e50);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.thankyou-container p:last-child {
+  margin-bottom: 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .thankyou-section {
+    padding: 1rem;
+    min-height: 50vh;
+  }
+
+  .thankyou-container {
+    width: 90vw;
+    padding: 2rem 1.5rem;
+  }
+
+  .thankyou-container h2 {
+    font-size: 2rem;
+  }
+
+  .thankyou-container p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankyou-container {
+    width: 95vw;
+    padding: 1.5rem 1rem;
+  }
+
+  .thankyou-container h2 {
+    font-size: 1.75rem;
+  }
+}

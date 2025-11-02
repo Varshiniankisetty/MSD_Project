@@ -1,0 +1,466 @@
+/* Global CSS Variables - Studio Vaia Apartment Theme with Bluish Tones */
+:root {
+  /* Primary Color Palette by Studio Vaia */
+  --sunflower: #74B9FF;           /* Sky blue for accents and highlights */
+  --pumpkin: #A29BFE;             /* Soft lavender for secondary elements */
+  --chestnut: #636E72;            /* Cool gray for text and structure */
+  --moss: #00B894;                /* Teal green for nature and accent elements */
+  --pine-tree: #2D3436;           /* Dark slate for headers and primary elements */
+
+  /* Apartment Color Palette */
+  --primary-color: var(--pine-tree);        /* Dark slate for structure */
+  --secondary-color: var(--sunflower);       /* Sky blue for trust/sky */
+  --accent-color: var(--pumpkin);            /* Soft lavender for urgency/alerts */
+  --success-color: var(--moss);              /* Teal green for success */
+  --warning-color: #FD79A8;                  /* Pink for warnings */
+  --light-color: #ecf0f1;                   /* Light gray for backgrounds */
+  --dark-color: var(--chestnut);             /* Cool gray for text */
+  --white: #ffffff;
+
+  /* Studio Vaia Apartment Theme Colors */
+  --apartment-cream: #f8f9fa;               /* Cool cream background */
+  --apartment-taupe: #b2bec3;               /* Cool taupe for subtle accents */
+  --apartment-sage: var(--moss);             /* Studio Vaia teal for nature */
+  --apartment-terracotta: var(--pumpkin);    /* Studio Vaia lavender for warmth */
+  --apartment-slate: var(--pine-tree);       /* Studio Vaia dark slate for structure */
+
+  /* Typography */
+  --font-primary: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
+  --shadow-xl: 0 15px 25px rgba(0, 0, 0, 0.15), 0 5px 10px rgba(0, 0, 0, 0.05);
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.3s ease-in-out;
+  --transition-slow: 0.5s ease-in-out;
+}
+
+/* Fallback styles for better compatibility */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: #333;
+  background: #f8f9fa;
+  min-height: 100vh;
+  position: relative;
+  font-size: 16px;
+}
+
+/* Ensure content is visible even if CSS variables fail */
+h1, h2, h3, h4, h5, h6 {
+  color: #2D3436;
+  color: var(--apartment-slate);
+}
+
+p {
+  color: #636E72;
+  color: var(--dark-color);
+}
+
+/* Global Reset and Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: var(--dark-color);
+  background: var(--apartment-cream);
+  min-height: 100vh;
+  position: relative;
+  font-size: 16px;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -2;
+  pointer-events: none;
+}
+
+/* Enhanced texture overlay with apartment theme colors */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Background Template Utilities */
+.bg-apartment-light {
+  background: linear-gradient(135deg, rgba(248, 245, 240, 0.9) 0%, rgba(240, 235, 227, 0.95) 100%);
+  position: relative;
+}
+
+.bg-apartment-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-apartment-image {
+  background: linear-gradient(135deg, var(--apartment-cream) 0%, rgba(240, 235, 227, 0.9) 100%);
+  position: relative;
+}
+
+/* Studio Vaia Color Palette Utilities */
+.color-sunflower { color: var(--sunflower); }
+.color-pumpkin { color: var(--pumpkin); }
+.color-chestnut { color: var(--chestnut); }
+.color-moss { color: var(--moss); }
+.color-pine-tree { color: var(--pine-tree); }
+
+.bg-sunflower { background-color: var(--sunflower); }
+.bg-pumpkin { background-color: var(--pumpkin); }
+.bg-chestnut { background-color: var(--chestnut); }
+.bg-moss { background-color: var(--moss); }
+.bg-pine-tree { background-color: var(--pine-tree); }
+
+/* Studio Vaia Gradient Backgrounds */
+.bg-gradient-sunflower {
+  background: linear-gradient(135deg, var(--sunflower) 0%, #d4941f 100%);
+}
+
+.bg-gradient-pumpkin {
+  background: linear-gradient(135deg, var(--pumpkin) 0%, #a65c24 100%);
+}
+
+.bg-gradient-moss {
+  background: linear-gradient(135deg, var(--moss) 0%, #6b7154 100%);
+}
+
+.bg-gradient-pine-tree {
+  background: linear-gradient(135deg, var(--pine-tree) 0%, #3d4a32 100%);
+}
+
+/* Studio Vaia Color Combinations */
+.bg-warm-autumn {
+  background: linear-gradient(135deg, var(--sunflower) 0%, var(--pumpkin) 50%, var(--chestnut) 100%);
+}
+
+.bg-forest-harmony {
+  background: linear-gradient(135deg, var(--moss) 0%, var(--pine-tree) 50%, var(--chestnut) 100%);
+}
+
+.bg-natural-palette {
+  background:
+    radial-gradient(circle at 20% 30%, var(--sunflower) 0%, transparent 40%),
+    radial-gradient(circle at 80% 70%, var(--moss) 0%, transparent 40%),
+    radial-gradient(circle at 50% 20%, var(--pumpkin) 0%, transparent 35%),
+    linear-gradient(135deg, var(--pine-tree) 0%, var(--chestnut) 100%);
+}
+
+.bg-apartment-accent {
+  background: linear-gradient(135deg, var(--apartment-sage) 0%, var(--secondary-color) 100%);
+  position: relative;
+  color: var(--white);
+}
+
+.bg-apartment-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-apartment-warm {
+  background: linear-gradient(135deg, var(--apartment-terracotta) 0%, var(--apartment-taupe) 100%);
+  position: relative;
+  color: var(--white);
+}
+
+.bg-apartment-warm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-apartment-pattern {
+  background:
+    /* Geometric apartment pattern */
+    url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23d4c5b3' fill-opacity='0.08'%3E%3Cpath d='M50 10 L90 30 L90 70 L50 90 L10 70 L10 30 Z M50 20 L80 35 L80 65 L50 80 L20 65 L20 35 Z'/%3E%3Cpath d='M25 40 L75 40 L75 50 L25 50 Z M40 25 L60 25 L60 75 L40 75 Z'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(135deg, var(--apartment-cream) 0%, #f0ebe3 100%);
+  background-size: 150px 150px, 100% 100%;
+  position: relative;
+}
+
+.bg-community-texture {
+  background:
+    /* Community network pattern */
+    url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%239db3a0' stroke-width='1' stroke-opacity='0.15'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3Cpath d='M10,40 L70,40 M40,10 L40,70'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 30% 30%, rgba(248, 245, 240, 0.9) 0%, rgba(240, 235, 227, 0.95) 100%);
+  background-size: 120px 120px, 100% 100%;
+  position: relative;
+}
+
+/* Apartment building silhouette backgrounds */
+.bg-building-silhouette {
+  background:
+    linear-gradient(to bottom, rgba(90, 107, 125, 0.8) 0%, rgba(90, 107, 125, 0.4) 40%, transparent 100%),
+    url("data:image/svg+xml,%3Csvg width='200' height='150' viewBox='0 0 200 150' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%235a6b7d' fill-opacity='0.1'%3E%3Crect x='20' y='60' width='15' height='90'/%3E%3Crect x='45' y='40' width='20' height='110'/%3E%3Crect x='75' y='50' width='18' height='100'/%3E%3Crect x='105' y='35' width='22' height='115'/%3E%3Crect x='140' y='45' width='16' height='105'/%3E%3Crect x='165' y='55' width='19' height='95'/%3E%3C/g%3E%3C/svg%3E"),
+    linear-gradient(135deg, var(--apartment-cream) 0%, #f0ebe3 100%);
+  background-size: cover, 400px 300px, 100% 100%;
+  background-position: center top, center 70%, center;
+  position: relative;
+}
+
+/* Window light effects for nighttime apartment feel */
+.bg-apartment-lights {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(255, 248, 220, 0.3) 0%, transparent 20%),
+    radial-gradient(circle at 75% 25%, rgba(255, 248, 220, 0.25) 0%, transparent 22%),
+    radial-gradient(circle at 45% 35%, rgba(255, 248, 220, 0.2) 0%, transparent 18%),
+    radial-gradient(circle at 15% 45%, rgba(255, 248, 220, 0.28) 0%, transparent 21%),
+    radial-gradient(circle at 85% 40%, rgba(255, 248, 220, 0.3) 0%, transparent 19%),
+    linear-gradient(135deg, var(--apartment-slate) 0%, var(--apartment-terracotta) 100%);
+  position: relative;
+}
+
+/* Garden/outdoor apartment community background */
+.bg-garden-community {
+  background:
+    radial-gradient(circle at 20% 80%, rgba(39, 174, 96, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 80% 20%, rgba(46, 204, 113, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 60% 40%, rgba(26, 188, 156, 0.1) 0%, transparent 35%),
+    linear-gradient(135deg, var(--apartment-cream) 0%, rgba(236, 240, 241, 0.9) 100%);
+  position: relative;
+}
+
+/* Modern apartment interior feel */
+.bg-modern-interior {
+  background:
+    linear-gradient(45deg, rgba(248, 245, 240, 0.95) 0%, rgba(241, 238, 233, 0.9) 25%, rgba(248, 245, 240, 0.95) 50%, rgba(241, 238, 233, 0.9) 75%, rgba(248, 245, 240, 0.95) 100%);
+  position: relative;
+}
+
+/* Subtle apartment texture overlay for cards */
+.card-bg-texture {
+  position: relative;
+}
+
+.card-bg-texture::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23f8f5f0' fill-opacity='0.02'%3E%3Cpath d='M15 0 L30 15 L15 30 L0 15 Z'/%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--apartment-slate);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+p {
+  margin-bottom: var(--spacing-md);
+  color: var(--apartment-slate);
+  opacity: 0.9;
+}
+
+/* Links */
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition-normal);
+}
+
+a:hover {
+  color: var(--apartment-terracotta);
+  text-decoration: underline;
+}
+
+/* Buttons */
+button {
+  font-family: var(--font-primary);
+  cursor: pointer;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: var(--transition-normal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Elements */
+input, select, textarea {
+  font-family: var(--font-primary);
+  border: 2px solid var(--apartment-taupe);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 1rem;
+  transition: var(--transition-normal);
+  background: var(--white);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.mb-0 { margin-bottom: 0; }
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+.mt-0 { margin-top: 0; }
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid rgba(212, 197, 179, 0.2);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary-color) 0%, var(--apartment-sage) 100%);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--apartment-terracotta);
+  color: var(--white);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+  transition: var(--transition-normal);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #b8926f;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 1.5rem;
+    --spacing-xxl: 2rem;
+  }
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  h3 { font-size: 1.25rem; }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.125rem; }
+}

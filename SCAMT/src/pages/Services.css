@@ -1,0 +1,119 @@
+body {
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  background: var(--apartment-cream); /* Use apartment theme background */
+}
+
+.services-section {
+  padding: 4rem 1.5rem;
+  text-align: center;
+  background: transparent; /* Inherit from body */
+  position: relative;
+  min-height: calc(100vh - 160px); /* Account for header and footer */
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--apartment-slate);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--apartment-slate);
+  margin-bottom: 3rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-normal);
+  cursor: pointer;
+  border: 1px solid rgba(212, 197, 179, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--apartment-sage) 100%);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(52, 152, 219, 0.3);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: var(--apartment-sage);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  color: var(--apartment-slate);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.service-card p {
+  color: var(--apartment-slate);
+  opacity: 0.8;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .services-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+}
