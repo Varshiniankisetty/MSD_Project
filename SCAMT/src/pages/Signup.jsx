@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
   setErrors({});
 
   try {
-    const res = await fetch("https://msd-project-backend.onrender.com", {
+    const res = await fetch("https://msd-project-backend.onrender.com/api/auth/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
