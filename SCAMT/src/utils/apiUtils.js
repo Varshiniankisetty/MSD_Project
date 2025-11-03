@@ -14,7 +14,7 @@ export async function apiRequest(endpoint, options = {}) {
     };
 
     try {
-        const response = await fetch(`http://localhost:8000${endpoint}`, defaultOptions);
+        const response = await fetch(`https://msd-project-backend.onrender.com${endpoint}`, defaultOptions);
 
         if (!response.ok) {
             throw new Error(`${response.status}: ${response.statusText}`);
