@@ -53,7 +53,7 @@ const Complaint = () => {
       }
 
       const res = await axios.post(
-        "https://msd-project-backend.onrender.com",
+        "https://msd-project-backend.onrender.com/api/feedback",
         formData,
         {
           headers: {
