@@ -1,18 +1,23 @@
-// middleware/auth.js
 const jwt = require('jsonwebtoken');
 
 module.exports = function (req, res, next) {
-  const token =
-    req.header('x-auth-token') ||
-    (req.headers.authorization && req.headers.authorization.split(' ')[1]);
+  let token = req.header('x-auth-token');
 
-  if (!token) return res.status(401).json({ msg: 'No token, authorization denied' });
+  if (!token && req.headers.authorization) {
+    const parts = req.headers.authorization.split(' ');
+    token = parts.length === 2 ? parts[1] : parts[0];
+  }
+
+  if (!token) {
+    return res.status(401).json({ msg: 'No token, authorization denied' });
+  }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.user = decoded.user; // attach user ID to request
+    req.user = decoded.user || decoded; // support both { user: {id} } and { id }
     next();
   } catch (err) {
+    console.error('JWT verification failed:', err.message);
     res.status(401).json({ msg: 'Invalid token' });
   }
 };
